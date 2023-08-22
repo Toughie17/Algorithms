@@ -22,6 +22,13 @@ for con in control:
 '''
 
 '''
-참신한 풀이법
+문자 개수 활용
 return n + 10 * (control.count('d') - control.count('a')) + (control.count('w') - control.count('s'))
+'''
+
+'''
+리스트 활용
+key = dict(zip(['w', 's', 'd', 'a'], [1, -1, 10, -10]))
+return n + sum( [key[c] for c in control] )
+
 '''
