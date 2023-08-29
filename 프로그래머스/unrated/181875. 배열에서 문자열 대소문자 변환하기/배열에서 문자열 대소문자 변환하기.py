@@ -7,10 +7,14 @@ def solution(strArr):
 
 #런타임 에러 발생
 
-    result = []
-    for i in range(len(strArr)):
-        if i % 2 == 1:
-            result.append(strArr[i].upper())
-        else:
-            result.append(strArr[i].lower())
-    return result
+    # result = []
+    # for i in range(len(strArr)):
+    #     if i % 2 == 1:
+    #         result.append(strArr[i].upper())
+    #     else:
+    #         result.append(strArr[i].lower())
+    # return result
+    
+# 짧은 풀이
+    return [string.upper() if index % 2 == 1 else string.lower() for index, string in enumerate(strArr)]
+
