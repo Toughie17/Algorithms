@@ -1,5 +1,5 @@
 def solution(num_list):
-    # 처음 풀이 슬라이싱 과정에서 배열을 2번 순회해야함.
+    # 처음 풀이
 #     odd_sum = sum(num_list[::2])
 #     even_sum = sum(num_list[1::2])
     
@@ -10,14 +10,18 @@ def solution(num_list):
 #     else:
 #         return odd_sum
     
-    # 더 효율적인 풀이 
-    # 인덱스를 통해 배열을 1번만 순회해도 됨.
-    odd_sum = 0
-    even_sum = 0
+    # 다른 풀이
+#     odd_sum = 0
+#     even_sum = 0
     
-    for i in range(len(num_list)):
-        if i % 2 == 0:
-            odd_sum += num_list[i]
-        else:
-            even_sum += num_list[i]
-    return max(odd_sum, even_sum)
+#     for i in range(len(num_list)):
+#         if i % 2 == 0:
+#             odd_sum += num_list[i]
+#         else:
+#             even_sum += num_list[i]
+#     return max(odd_sum, even_sum)
+
+    # 최적 풀이
+    # max(홀수의 합, 짝수의 합)
+    return max(sum(num_list[::2]),sum(num_list[1::2]) )
+    
