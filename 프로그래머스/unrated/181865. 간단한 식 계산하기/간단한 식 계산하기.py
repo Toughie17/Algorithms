@@ -12,3 +12,6 @@ def solution(binomial):
     operators = {'+': num1 + num2, '-': num1 - num2, '*': num1 * num2}
     if op in operators:
         return operators[op]
+    
+    #내장함수 사용
+    # return eval(binomial)
