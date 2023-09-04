@@ -6,10 +6,9 @@ def solution(num_list):
         while one > 1:
             if one % 2 == 0:
                 one //= 2
-                count += 1
             else:
                 one = (one-1) // 2
-                count += 1
+            count += 1
                 
     return count
 
