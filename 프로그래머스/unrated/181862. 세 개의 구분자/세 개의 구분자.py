@@ -1,20 +1,27 @@
 def solution(myStr):
-    result = []
-    current = ''
+#     result = []
+#     current = ''
     
-    for cha in myStr:
-        #구분자를 만났을 때
-        if cha in 'abc':
-            if current:
-                result.append(current)
-                current = ''
-        else:
-            current += cha
+#     for cha in myStr:
+#         #구분자를 만났을 때
+#         if cha in 'abc':
+#             if current:
+#                 result.append(current)
+#                 current = ''
+#         else:
+#             current += cha
         
-    if current:
-        result.append(current)
+#     if current:
+#         result.append(current)
         
-    if result:
-        return result
-    else:
-        return ["EMPTY"]
+#     if result:
+#         return result
+#     else:
+#         return ["EMPTY"]
+    
+    answer = myStr.replace('a', ' ').replace('b', ' ').replace('c', ' ').split()
+    if answer:
+        return answer
+    return ["EMPTY"]
+    
+    
