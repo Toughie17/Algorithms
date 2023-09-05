@@ -2,19 +2,18 @@ def solution(arr):
     x = 0
     
     while True:
-        current = []
+        new = []
         for num in arr:
-            if num >= 50 and num % 2 == 0:
-                current.append(num // 2)
+            if num >=50 and num % 2 == 0:
+                new.append(num // 2)
             elif num < 50 and num % 2 == 1:
-                current.append(num * 2 + 1)
+                new.append(num * 2 + 1)
             else:
-                current.append(num)
-        
-        if arr == current:
+                new.append(num)
+        if arr == new:
             break
-        arr = current
-        x += 1
-        
+        else:
+            arr = new
+            x += 1
+            
     return x
-        
