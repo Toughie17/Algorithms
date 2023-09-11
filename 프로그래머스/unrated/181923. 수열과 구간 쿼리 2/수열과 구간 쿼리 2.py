@@ -1,19 +1,12 @@
 def solution(arr, queries):
-    answer = []
+    result = []
     
     for (s, e, k) in queries:
-        lowest = []
+        find = []
         
-        for i in range(s,e + 1):
+        for i in range(s, e + 1):
             if arr[i] > k:
-                lowest.append(arr[i])
-                
-        if lowest:
-            answer.append(min(lowest))
-        else:
-            answer.append(-1)
-            
-    return answer
-
+                find.append(arr[i])
+        result.append(min(find) if find else -1)
         
-        
+    return result
