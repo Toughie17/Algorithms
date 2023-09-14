@@ -1,10 +1,7 @@
 def solution(num_list):
-    odd, even = 0, 0
+    answer = [0, 0]
     
     for num in num_list:
-        if num % 2 == 0:
-            even += 1
-        else:
-            odd += 1
-            
-    return [even, odd]
+        answer[num % 2] += 1
+        
+    return answer
