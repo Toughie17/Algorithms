@@ -15,3 +15,6 @@ def solution(sides):
         
     return len(answer)
         
+    
+    # 짧은 변의 길이 * 2 -1
+    # return (sorted(sides)[0] * 2) - 1
