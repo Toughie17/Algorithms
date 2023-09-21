@@ -29,7 +29,6 @@ def solution(keyinput, board):
         if abs(x + dx) > xlim or abs(y + dy) > ylim:
             continue
         else:
-            x += dx
-            y += dy
+            x, y = x + dx, y + dy
             
     return [x, y]
