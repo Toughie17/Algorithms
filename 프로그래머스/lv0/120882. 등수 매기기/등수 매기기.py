@@ -1,8 +1,5 @@
 def solution(score):
-    average = [sum(i) / 2 for i in score]
+    average = [sum(i) / len(i) for i in score]
     rank = sorted(average, reverse = True)
     
-    answer = []
-    for i in average:
-        answer.append(rank.index(i) + 1)
-    return answer
+    return [rank.index(score) + 1 for score in average]
