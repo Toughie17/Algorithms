@@ -1,6 +1,5 @@
 def solution(x):
     total = sum(map(int,list(str(x))))
     
-    if x % total == 0:
-        return True
-    return False
+    # return x % sum(int(n) for n in str(x)) == 0
+    return x % total == 0
