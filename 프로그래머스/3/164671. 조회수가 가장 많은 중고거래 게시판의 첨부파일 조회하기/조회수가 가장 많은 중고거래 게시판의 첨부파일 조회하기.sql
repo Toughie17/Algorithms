@@ -1,0 +1,9 @@
+-- 코드를 입력하세요
+SELECT
+'/home/grep/src/'||A.board_id ||'/'|| B.file_id || B.file_name ||B.file_ext FILE_PATH
+
+FROM USED_GOODS_BOARD A
+JOIN USED_GOODS_FILE B
+ON A.BOARD_ID = B.BOARD_ID
+WHERE A.VIEWS = (SELECT MAX(VIEWS) FROM USED_GOODS_BOARD)
+ORDER BY B.FILE_ID DESC;
