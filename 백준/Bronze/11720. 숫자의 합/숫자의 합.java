@@ -1,15 +1,15 @@
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        int count = scanner.nextInt();
-        String input = scanner.next();
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
         int sum = 0;
-        for (int i =0; i < count; i++) {
-            sum += Character.getNumericValue(input.charAt(i));
-        }
 
+        char[] arr = sc.next().toCharArray();
+        for(char a : arr) {
+//            sum += a - 48;
+            sum += Character.getNumericValue(a);
+        }
         System.out.println(sum);
     }
 }
